@@ -5,14 +5,14 @@
             <id>0</id>
             <name>Luis</name>
             <rank>0</rank>
-            <ehre>6</ehre>
+            <ehre>-46</ehre>
             <pb>luis1</pb>
         </genosse>
         <genosse>
             <id>1</id>
             <name>Fabi</name>
             <rank>0</rank>
-            <ehre>2</ehre>
+            <ehre>-16</ehre>
             <pb>luis2</pb>
         </genosse>
     </genossen>
