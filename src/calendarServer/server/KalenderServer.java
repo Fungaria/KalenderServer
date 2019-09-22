@@ -5,6 +5,8 @@
  */
 package calendarServer.server;
 
+import calendarServer.server.listeners.LoginListener;
+import calendarServer.server.listeners.TerminListener;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
 import calendarServer.database.*;
@@ -41,8 +43,10 @@ public class KalenderServer extends Server {
         Kryo k = getKryo();
 
         k.register(DataRoot.class);
-        k.register(Kunde.class);
         k.register(Date.class);
+        k.register(Kunde.class);
+        k.register(Friseur.class);
+        k.register(Service.class);
         k.register(Termin.class);
         k.register(ArrayList.class);
         k.register(LoginRequest.class);

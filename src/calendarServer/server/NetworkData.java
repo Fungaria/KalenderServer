@@ -32,6 +32,6 @@ public class NetworkData {
         public int duration;
         public int serviceId;
         public int friseurId;
+        public int urheber;
     }
-
 }

@@ -9,11 +9,11 @@ public class Main {
     /**maximum framerate. -1 for unlimited FPS.*/
     private static float FPS_CAP = 60;
     
-    public static Application ehre;
+    public static Application app;
     
     public static void main(String[] args) {
-        ehre = new Application();
-        ehre.start();
+        app = new Application();
+        app.start();
         
         long last_time = System.nanoTime();
         while (true) {
@@ -25,7 +25,7 @@ public class Main {
             }
 
             last_time = time;
-            ehre.update(delta_time);
+            app.update(delta_time);
         }
     }
 }

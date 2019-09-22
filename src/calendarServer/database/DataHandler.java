@@ -48,4 +48,12 @@ public class DataHandler {
             Logger.getLogger(DataHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+     public int nextTerminId(){
+        int maxId=0;
+        for (Termin termin : root.termine) {
+            maxId = Math.max(termin.id, maxId);
+        }
+        return maxId+1;
+    }
 }

@@ -1,4 +1,4 @@
-package calendarServer.server;
+package calendarServer.server.listeners;
 
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
