@@ -34,4 +34,8 @@ public class NetworkData {
         public int friseurId;
         public int urheber;
     }
+    
+    public static class StornoRequest{
+        public int id;
+    }
 }

@@ -1,41 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:dataRoot xmlns:ns2="de.saufgenossen.ehre">
-    <kalender>
+    <termine>
         <termin>
             <id>1</id>
             <kundenid>0</kundenid>
-            <start>2019-09-22 10:30:00</start>
-            <dauer>90</dauer>
+            <start>2019-09-12 08:00:15</start>
+            <dauer>60</dauer>
             <service>0</service>
-            <friseur>3</friseur>
+            <friseur>0</friseur>
+            <erstellt>2019-09-28 18:21:25</erstellt>
             <urheber>0</urheber>
         </termin>
         <termin>
             <id>2</id>
+            <kundenid>5</kundenid>
+            <start>2019-09-28 08:00:15</start>
+            <dauer>60</dauer>
+            <service>0</service>
+            <friseur>0</friseur>
+            <erstellt>2019-09-28 18:25:58</erstellt>
+            <urheber>0</urheber>
+        </termin>
+        <termin>
+            <id>3</id>
             <kundenid>0</kundenid>
-            <start>2019-09-22 15:15:00</start>
+            <start>2019-09-28 12:00:21</start>
             <dauer>60</dauer>
             <service>0</service>
             <friseur>4</friseur>
+            <erstellt>2019-09-28 18:33:30</erstellt>
             <urheber>0</urheber>
         </termin>
-    </kalender>
+        <termin>
+            <id>4</id>
+            <kundenid>0</kundenid>
+            <start>2019-09-25 11:00:21</start>
+            <dauer>60</dauer>
+            <service>0</service>
+            <friseur>2</friseur>
+            <erstellt>2019-09-28 18:33:48</erstellt>
+            <urheber>0</urheber>
+        </termin>
+        <termin>
+            <id>5</id>
+            <kundenid>0</kundenid>
+            <start>2019-09-25 10:00:21</start>
+            <dauer>60</dauer>
+            <service>0</service>
+            <friseur>4</friseur>
+            <erstellt>2019-09-28 18:33:56</erstellt>
+            <urheber>0</urheber>
+        </termin>
+        <termin>
+            <id>6</id>
+            <kundenid>0</kundenid>
+            <start>2019-09-28 10:30:21</start>
+            <dauer>60</dauer>
+            <service>0</service>
+            <friseur>3</friseur>
+            <erstellt>2019-09-28 18:34:06</erstellt>
+            <urheber>0</urheber>
+        </termin>
+    </termine>
+    <blockierungen/>
     <kunden>
         <kunde>
+            <name>Reiser</name>
             <vorname>Peter</vorname>
-            <name>Reiser</name>
+            <id>0</id>
         </kunde>
         <kunde>
-            <vorname>Luis</vorname>
             <name>Hülß</name>
+            <vorname>Luis</vorname>
+            <id>0</id>
         </kunde>
         <kunde>
-            <vorname>Samuel</vorname>
             <name>Reiser</name>
+            <vorname>Samuel</vorname>
+            <id>0</id>
         </kunde>
         <kunde>
-            <vorname>Paul</vorname>
             <name>Kuschfeld</name>
+            <vorname>Paul</vorname>
+            <id>0</id>
         </kunde>
     </kunden>
     <friseure>

@@ -9,9 +9,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(namespace = "de.saufgenossen.ehre")
 public class DataRoot {
 
-    @XmlElementWrapper(name = "kalender")
+    @XmlElementWrapper(name = "termine")
     @XmlElement(name = "termin")
     public final ArrayList<Termin> termine = new ArrayList<Termin>();
+    
+    @XmlElementWrapper(name = "blockierungen")
+    @XmlElement(name = "blockierung")
+    public final ArrayList<Blockierung> blockierungen = new ArrayList<Blockierung>();
 
     @XmlElementWrapper(name = "kunden")
     @XmlElement(name = "kunde")
@@ -24,9 +28,6 @@ public class DataRoot {
     @XmlElementWrapper(name = "services")
     @XmlElement(name = "service")
     public final ArrayList<Service> services = new ArrayList<Service>();
-    
-    @XmlElement(name = "account")
-    public Account account;
     
     @Override
     public String toString() {

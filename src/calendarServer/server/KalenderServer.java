@@ -48,10 +48,12 @@ public class KalenderServer extends Server {
         k.register(Friseur.class);
         k.register(Service.class);
         k.register(Termin.class);
+        k.register(Blockierung.class);
         k.register(ArrayList.class);
         k.register(LoginRequest.class);
         k.register(LoginResponse.class);
         k.register(TerminRequest.class);
+        k.register(StornoRequest.class);
     }
 
     private void registerListeners() {
