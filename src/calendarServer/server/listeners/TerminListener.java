@@ -22,11 +22,11 @@ public class TerminListener extends Listener {
         if (object instanceof NetworkData.TerminRequest) {
             Termin termin = createTermin((NetworkData.TerminRequest) object);
             app.handler.root.termine.add(termin);
-            updateDatabase();
+            app.handler.writeFile();
             app.server.sendToAllTCP(termin);
         }else if(object instanceof NetworkData.StornoRequest){
             deleteTermin(((NetworkData.StornoRequest) object).id);
-            updateDatabase();
+            app.handler.writeFile();
             app.server.sendToAllTCP(object);
         }
     }
@@ -35,13 +35,6 @@ public class TerminListener extends Listener {
         app.handler.root.termine.removeIf((t) -> t.id==id);
     }
     
-    private void updateDatabase(){
-        try {
-            app.handler.writeFile();
-        } catch (JAXBException ex) {
-            Logger.getLogger(TerminListener.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     
     private Termin createTermin(NetworkData.TerminRequest request) {
         Termin termin = new Termin();

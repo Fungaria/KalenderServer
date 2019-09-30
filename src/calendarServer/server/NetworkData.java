@@ -38,4 +38,11 @@ public class NetworkData {
     public static class StornoRequest{
         public int id;
     }
+    
+    public static class BlockRequest{
+        public Date start;
+        public int duration;
+        public int friseur;
+        public String msg;
+    }
 }

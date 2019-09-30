@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Blockierung {
     public int id;
     public Date start;
-    public int dauer;
+    public int duration;
     public int friseur;
     public String msg;
 }

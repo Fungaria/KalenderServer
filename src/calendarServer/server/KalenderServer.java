@@ -11,6 +11,7 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
 import calendarServer.database.*;
 import calendarServer.server.NetworkData.*;
+import calendarServer.server.listeners.BlockListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -54,10 +55,12 @@ public class KalenderServer extends Server {
         k.register(LoginResponse.class);
         k.register(TerminRequest.class);
         k.register(StornoRequest.class);
+        k.register(BlockRequest.class);
     }
 
     private void registerListeners() {
         super.addListener(new TerminListener());
         super.addListener(new LoginListener());
+        super.addListener(new BlockListener());
     }
 }
