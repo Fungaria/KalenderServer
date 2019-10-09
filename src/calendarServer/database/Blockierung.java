@@ -6,7 +6,9 @@
 package calendarServer.database;
 
 import java.util.Date;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
@@ -15,6 +17,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "blockierung")
 public class Blockierung {
     public int id;
+    @XmlElement(name = "start", required = true) 
+    @XmlJavaTypeAdapter(DateAdapter.class)
     public Date start;
     public int duration;
     public int friseur;

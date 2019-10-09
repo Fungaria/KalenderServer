@@ -51,8 +51,16 @@ public class DataHandler {
 
     public int nextTerminId() {
         int maxId = 0;
-        for (Termin termin : root.termine) {
+        for (Termin termin : root.appointments) {
             maxId = Math.max(termin.id, maxId);
+        }
+        return maxId + 1;
+    }
+
+    public int nextBlockId() {
+        int maxId = 0;
+        for (Blockierung blockierung : root.blockierungen) {
+            maxId = Math.max(blockierung.id, maxId);
         }
         return maxId + 1;
     }

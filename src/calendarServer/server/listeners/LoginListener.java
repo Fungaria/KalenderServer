@@ -1,5 +1,6 @@
 package calendarServer.server.listeners;
 
+import static calendarServer.Main.app;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import calendarServer.server.NetworkData.LoginRequest;
@@ -19,6 +20,8 @@ public class LoginListener extends Listener{
             response.msg = "oh me boii";
             response.sucess = true;
             connection.sendTCP(response);
+            
+            connection.sendTCP(app.handler.root);
         }
     }
 }

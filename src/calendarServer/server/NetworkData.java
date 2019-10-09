@@ -14,7 +14,6 @@ import java.util.Date;
 public class NetworkData {
 
     public static class LoginRequest {
-
         public String username;
         //encryption is for n00bs i think
         public String password;
@@ -36,6 +35,10 @@ public class NetworkData {
     }
     
     public static class StornoRequest{
+        public int id;
+    }
+    
+    public static class RemoveBlockRequest {
         public int id;
     }
     

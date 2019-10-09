@@ -15,5 +15,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Friseur {
     public int id;
     public String name;
-    //TODO: services
+    
+    @Override
+    public String toString() {
+        return name;
+    }
 }

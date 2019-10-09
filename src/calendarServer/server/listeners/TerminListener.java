@@ -21,7 +21,7 @@ public class TerminListener extends Listener {
     public void received(Connection connection, Object object) {
         if (object instanceof NetworkData.TerminRequest) {
             Termin termin = createTermin((NetworkData.TerminRequest) object);
-            app.handler.root.termine.add(termin);
+            app.handler.root.appointments.add(termin);
             app.handler.writeFile();
             app.server.sendToAllTCP(termin);
         }else if(object instanceof NetworkData.StornoRequest){
@@ -32,7 +32,7 @@ public class TerminListener extends Listener {
     }
 
     private void deleteTermin(int id){
-        app.handler.root.termine.removeIf((t) -> t.id==id);
+        app.handler.root.appointments.removeIf((t) -> t.id==id);
     }
     
     

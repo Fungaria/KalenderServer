@@ -13,189 +13,79 @@
         </termin>
         <termin>
             <id>2</id>
-            <kundenid>5</kundenid>
-            <start>2019-09-28 08:00:15</start>
-            <dauer>60</dauer>
+            <kundenid>0</kundenid>
+            <start>2019-10-08 10:30:08</start>
+            <dauer>180</dauer>
             <service>0</service>
-            <friseur>0</friseur>
-            <erstellt>2019-09-28 18:25:58</erstellt>
+            <friseur>2</friseur>
+            <erstellt>2019-10-08 12:57:48</erstellt>
             <urheber>0</urheber>
         </termin>
         <termin>
             <id>3</id>
             <kundenid>0</kundenid>
-            <start>2019-09-28 12:00:21</start>
-            <dauer>60</dauer>
+            <start>2019-10-11 11:00:08</start>
+            <dauer>120</dauer>
             <service>0</service>
-            <friseur>4</friseur>
-            <erstellt>2019-09-28 18:33:30</erstellt>
+            <friseur>2</friseur>
+            <erstellt>2019-10-08 12:58:39</erstellt>
             <urheber>0</urheber>
         </termin>
         <termin>
             <id>4</id>
             <kundenid>0</kundenid>
-            <start>2019-09-25 11:00:21</start>
+            <start>2019-10-09 09:00:09</start>
             <dauer>60</dauer>
             <service>0</service>
             <friseur>2</friseur>
-            <erstellt>2019-09-28 18:33:48</erstellt>
+            <erstellt>2019-10-08 22:09:22</erstellt>
             <urheber>0</urheber>
         </termin>
         <termin>
             <id>5</id>
             <kundenid>0</kundenid>
-            <start>2019-09-25 10:00:21</start>
-            <dauer>60</dauer>
-            <service>0</service>
-            <friseur>4</friseur>
-            <erstellt>2019-09-28 18:33:56</erstellt>
-            <urheber>0</urheber>
-        </termin>
-        <termin>
-            <id>6</id>
-            <kundenid>0</kundenid>
-            <start>2019-09-28 10:30:21</start>
-            <dauer>60</dauer>
-            <service>0</service>
-            <friseur>3</friseur>
-            <erstellt>2019-09-28 18:34:06</erstellt>
-            <urheber>0</urheber>
-        </termin>
-        <termin>
-            <id>7</id>
-            <kundenid>5</kundenid>
-            <start>2019-09-01 09:00:33</start>
+            <start>2019-10-10 10:00:09</start>
             <dauer>60</dauer>
             <service>0</service>
             <friseur>2</friseur>
-            <erstellt>2019-09-30 14:54:57</erstellt>
-            <urheber>0</urheber>
-        </termin>
-        <termin>
-            <id>8</id>
-            <kundenid>5</kundenid>
-            <start>2019-09-20 10:00:23</start>
-            <dauer>60</dauer>
-            <service>0</service>
-            <friseur>1</friseur>
-            <erstellt>2019-09-30 14:55:41</erstellt>
-            <urheber>0</urheber>
-        </termin>
-        <termin>
-            <id>9</id>
-            <kundenid>5</kundenid>
-            <start>2019-09-20 10:45:23</start>
-            <dauer>240</dauer>
-            <service>0</service>
-            <friseur>4</friseur>
-            <erstellt>2019-09-30 14:55:54</erstellt>
+            <erstellt>2019-10-08 22:09:27</erstellt>
             <urheber>0</urheber>
         </termin>
     </termine>
     <blockierungen>
         <blockierung>
-            <id>0</id>
-            <start>2019-09-29T10:00:10.329+02:00</start>
-            <duration>1</duration>
-            <friseur>3</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T10:00:23.650+02:00</start>
-            <duration>1</duration>
-            <friseur>2</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T10:00:40.747+02:00</start>
-            <duration>8</duration>
-            <friseur>4</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-18T10:00:53.312+02:00</start>
-            <duration>8</duration>
-            <friseur>3</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T11:00:12.345+02:00</start>
-            <duration>8</duration>
-            <friseur>1</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T11:15:12.345+02:00</start>
+            <id>3</id>
+            <start>2019-10-02 09:00:00</start>
             <duration>3</duration>
-            <friseur>2</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T10:15:12.345+02:00</start>
-            <duration>3</duration>
-            <friseur>6</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T10:30:12.345+02:00</start>
-            <duration>5</duration>
             <friseur>5</friseur>
             <msg></msg>
         </blockierung>
         <blockierung>
-            <id>0</id>
-            <start>2019-09-30T10:45:12.345+02:00</start>
+            <id>5</id>
+            <start>2019-10-02 10:00:00</start>
+            <duration>7</duration>
+            <friseur>2</friseur>
+            <msg></msg>
+        </blockierung>
+        <blockierung>
+            <id>6</id>
+            <start>2019-10-03 10:15:00</start>
+            <duration>9</duration>
+            <friseur>3</friseur>
+            <msg></msg>
+        </blockierung>
+        <blockierung>
+            <id>10</id>
+            <start>2019-10-03 09:30:00</start>
             <duration>4</duration>
-            <friseur>3</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T10:15:26.828+02:00</start>
-            <duration>6</duration>
-            <friseur>2</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T09:15:26.828+02:00</start>
-            <duration>5</duration>
             <friseur>4</friseur>
             <msg></msg>
         </blockierung>
         <blockierung>
-            <id>0</id>
-            <start>2019-09-30T12:15:26.828+02:00</start>
-            <duration>5</duration>
-            <friseur>5</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-23T10:45:39.886+02:00</start>
-            <duration>12</duration>
-            <friseur>3</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T09:30:46.652+02:00</start>
-            <duration>6</duration>
-            <friseur>3</friseur>
-            <msg></msg>
-        </blockierung>
-        <blockierung>
-            <id>0</id>
-            <start>2019-09-30T09:30:58.239+02:00</start>
-            <duration>13</duration>
-            <friseur>1</friseur>
+            <id>14</id>
+            <start>2019-10-11 14:00:00</start>
+            <duration>4</duration>
+            <friseur>2</friseur>
             <msg></msg>
         </blockierung>
     </blockierungen>

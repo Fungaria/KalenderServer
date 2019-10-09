@@ -16,4 +16,10 @@ public class Kunde {
     public String name;
     public String vorname;
     public int id;
+    public String phone;
+
+    @Override
+    public String toString() {
+        return vorname+" "+name;
+    }
 }

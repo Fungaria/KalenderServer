@@ -15,6 +15,9 @@ import calendarServer.server.listeners.BlockListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -43,6 +46,7 @@ public class KalenderServer extends Server {
     private void registerClasses() {
         Kryo k = getKryo();
 
+        k.register(ArrayList.class);
         k.register(DataRoot.class);
         k.register(Date.class);
         k.register(Kunde.class);
@@ -50,12 +54,12 @@ public class KalenderServer extends Server {
         k.register(Service.class);
         k.register(Termin.class);
         k.register(Blockierung.class);
-        k.register(ArrayList.class);
         k.register(LoginRequest.class);
         k.register(LoginResponse.class);
         k.register(TerminRequest.class);
         k.register(StornoRequest.class);
         k.register(BlockRequest.class);
+        k.register(RemoveBlockRequest.class);
     }
 
     private void registerListeners() {
