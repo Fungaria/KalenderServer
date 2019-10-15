@@ -5,11 +5,10 @@
  */
 package calendarServer.database;
 
+import calendarServer.database.adapters.DateAdapter;
 import calendarServer.database.adapters.MapElement;
-import calendarServer.database.adapters.VacationAdapter;
-import java.util.HashMap;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -17,16 +16,26 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *
  * @author sreis
  */
-@XmlRootElement(name = "friseur")
-public class Friseur extends MapElement{
+@XmlRootElement(name = "vacation")
+public class Vacation extends MapElement{
     @XmlAttribute
-    public String name;
-    @XmlElement
-    @XmlJavaTypeAdapter(VacationAdapter.class)
-    public final HashMap<Integer, Vacation> vacations = new HashMap<>();
-    
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    public Date start;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    public Date end;
+
+    public Vacation() {
+    }
+
+    public Vacation(int id, Date start, Date end) {
+        this.id = id;
+        this.start = start;
+        this.end = end;
+    }
+
     @Override
     public String toString() {
-        return name;
+        return id+"-  start:"+start+"   end:"+end;
     }
 }

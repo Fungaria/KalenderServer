@@ -2,12 +2,10 @@ package calendarServer.server.listeners;
 
 import static calendarServer.Main.app;
 import calendarServer.database.Blockierung;
+import calendarServer.database.DataHandler;
 import calendarServer.server.NetworkData;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.xml.bind.JAXBException;
 
 /**
  *
@@ -30,18 +28,18 @@ public class BlockListener extends Listener{
         Blockierung blockierung = new Blockierung();
         blockierung.duration = request.duration;
         blockierung.start = request.start;
-        blockierung.id = app.handler.nextBlockId();
+        blockierung.id = DataHandler.nextId(app.handler.root.blockierungen);
         blockierung.friseur = request.friseur;
         blockierung.msg = request.msg;
 
-        app.handler.root.blockierungen.add(blockierung);
+        app.handler.root.blockierungen.put(blockierung.id, blockierung);
         app.handler.writeFile();
 
         app.server.sendToAllTCP(blockierung);
     }
     
     private void removeBlock(int id){
-        app.handler.root.blockierungen.removeIf((t) -> t.id==id);
+        app.handler.root.blockierungen.remove(id);
         app.handler.writeFile();
     }
 }

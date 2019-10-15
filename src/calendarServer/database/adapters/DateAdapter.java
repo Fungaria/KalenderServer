@@ -1,4 +1,4 @@
-package calendarServer.database;
+package calendarServer.database.adapters;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

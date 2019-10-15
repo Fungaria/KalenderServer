@@ -3,6 +3,8 @@ package calendarServer.database;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
@@ -31,9 +33,11 @@ public class DataHandler {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DataHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     public void writeFile() {
+        
         try {
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
@@ -49,18 +53,10 @@ public class DataHandler {
         writeFile();
     }
 
-    public int nextTerminId() {
+    public static int nextId(HashMap<Integer, ? extends Object> map) {
         int maxId = 0;
-        for (Termin termin : root.appointments) {
-            maxId = Math.max(termin.id, maxId);
-        }
-        return maxId + 1;
-    }
-
-    public int nextBlockId() {
-        int maxId = 0;
-        for (Blockierung blockierung : root.blockierungen) {
-            maxId = Math.max(blockierung.id, maxId);
+        for (int i : map.keySet()) {
+            maxId = Math.max(i, maxId);
         }
         return maxId + 1;
     }

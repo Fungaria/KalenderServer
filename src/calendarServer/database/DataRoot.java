@@ -1,33 +1,37 @@
 package calendarServer.database;
 
-import java.util.ArrayList;
-
+import calendarServer.database.adapters.BlockAdapter;
+import calendarServer.database.adapters.ClientAdapter;
+import calendarServer.database.adapters.ServiceAdapter;
+import calendarServer.database.adapters.TerminAdapter;
+import calendarServer.database.adapters.WorkerAdapter;
+import java.util.HashMap;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-@XmlRootElement(namespace = "de.saufgenossen.ehre")
+@XmlRootElement(namespace = "de.fungistudii.kalender")
 public class DataRoot {
 
-    @XmlElementWrapper(name = "termine")
-    @XmlElement(name = "termin")
-    public final ArrayList<Termin> appointments = new ArrayList<Termin>();
+    @XmlElement(name = "termine")
+    @XmlJavaTypeAdapter(TerminAdapter.class)
+    public final HashMap<Integer, Termin> appointments = new HashMap<>();
     
-    @XmlElementWrapper(name = "blockierungen")
-    @XmlElement(name = "blockierung")
-    public final ArrayList<Blockierung> blockierungen = new ArrayList<Blockierung>();
+    @XmlElement(name = "blockierungen")
+    @XmlJavaTypeAdapter(BlockAdapter.class)
+    public final HashMap<Integer, Blockierung> blockierungen = new HashMap<>();
 
-    @XmlElementWrapper(name = "kunden")
-    @XmlElement(name = "kunde")
-    public final ArrayList<Kunde> kunden = new ArrayList<Kunde>();
+    @XmlElement(name = "kunden")
+    @XmlJavaTypeAdapter(ClientAdapter.class)
+    public final HashMap<Integer, Kunde> kunden = new HashMap<>();
     
-    @XmlElementWrapper(name = "friseure")
-    @XmlElement(name = "friseur")
-    public final ArrayList<Friseur> friseure = new ArrayList<Friseur>();
+    @XmlElement(name = "friseure")
+    @XmlJavaTypeAdapter(WorkerAdapter.class)
+    public final HashMap<Integer, Friseur> friseure = new HashMap<>();
     
-    @XmlElementWrapper(name = "services")
-    @XmlElement(name = "service")
-    public final ArrayList<Service> services = new ArrayList<Service>();
+    @XmlElement(name = "services")
+    @XmlJavaTypeAdapter(ServiceAdapter.class)
+    public final HashMap<Integer, Service> services = new HashMap<>();
     
     @Override
     public String toString() {
