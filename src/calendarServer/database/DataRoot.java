@@ -3,6 +3,7 @@ package calendarServer.database;
 import calendarServer.database.adapters.BlockAdapter;
 import calendarServer.database.adapters.ClientAdapter;
 import calendarServer.database.adapters.ServiceAdapter;
+import calendarServer.database.adapters.ServiceCategoryAdapter;
 import calendarServer.database.adapters.TerminAdapter;
 import calendarServer.database.adapters.WorkerAdapter;
 import java.util.HashMap;
@@ -32,6 +33,10 @@ public class DataRoot {
     @XmlElement(name = "services")
     @XmlJavaTypeAdapter(ServiceAdapter.class)
     public final HashMap<Integer, Service> services = new HashMap<>();
+    
+    @XmlElement(name = "serviceCategories")
+    @XmlJavaTypeAdapter(ServiceCategoryAdapter.class)
+    public final HashMap<Integer, ServiceCategory> serviceCategories = new HashMap<>();
     
     @Override
     public String toString() {

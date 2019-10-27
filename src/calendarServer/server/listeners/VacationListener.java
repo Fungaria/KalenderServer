@@ -5,10 +5,10 @@ import calendarServer.database.DataHandler;
 import calendarServer.database.Friseur;
 import calendarServer.database.Vacation;
 import calendarServer.server.NetworkData;
-import calendarServer.util.DateUtil;
+import calendarServer.server.NetworkData.CreateVacationRequest;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
-import java.util.Comparator;
+import java.util.Date;
 
 /**
  *
@@ -18,8 +18,8 @@ public class VacationListener extends Listener{
 
     @Override
     public void received(Connection connection, Object object) {
-        if(object instanceof NetworkData.VacationRequest){
-            NetworkData.VacationRequest request = (NetworkData.VacationRequest)object;
+        if(object instanceof NetworkData.EditVacationRequest){
+            NetworkData.EditVacationRequest request = (NetworkData.EditVacationRequest)object;
             
             Friseur friseur = app.handler.root.friseure.get(request.workerId);
             
@@ -29,7 +29,6 @@ public class VacationListener extends Listener{
             vacation.id = request.id;
             
             friseur.vacations.put(vacation.id, vacation);
-            
             app.handler.writeFile();
             app.server.sendToAllTCP(friseur);
         }else if(object instanceof NetworkData.RemoveVacationRequest){
@@ -37,6 +36,12 @@ public class VacationListener extends Listener{
             app.handler.root.friseure.get(request.workerId).vacations.remove(request.id);
             app.handler.writeFile();
             app.server.sendToAllTCP(app.handler.root.friseure.get(request.workerId));
+        }else if(object instanceof NetworkData.CreateVacationRequest){
+            Friseur friseur = app.handler.root.friseure.get(((CreateVacationRequest) object).workerId);
+            Vacation vacation = new Vacation(DataHandler.nextId(friseur.vacations), new Date(), new Date());
+            friseur.vacations.put(vacation.id, vacation);
+            app.handler.writeFile();
+            connection.sendTCP(friseur);
         }
     }
 }

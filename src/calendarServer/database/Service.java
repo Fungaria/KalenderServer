@@ -20,6 +20,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class Service extends MapElement{
     @XmlAttribute
     public String name;
+    
+    @XmlAttribute
+    public int category;
+    
+    @XmlAttribute
+    public int duration;
+    
+    @XmlAttribute
+    public int einwirkZeit;
+    
+    @XmlAttribute
+    public int price;
 
     @Override
     public String toString() {

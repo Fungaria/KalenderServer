@@ -12,12 +12,14 @@ import calendarServer.database.Service;
 import calendarServer.database.Vacation;
 import calendarServer.database.DataRoot;
 import calendarServer.database.Friseur;
+import calendarServer.database.ServiceCategory;
 import calendarServer.server.listeners.LoginListener;
 import calendarServer.server.listeners.TerminListener;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
 import calendarServer.server.NetworkData.*;
 import calendarServer.server.listeners.BlockListener;
+import calendarServer.server.listeners.ServiceListener;
 import calendarServer.server.listeners.VacationListener;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -60,6 +62,7 @@ public class KalenderServer extends Server {
         k.register(Friseur.class);
         k.register(Vacation.class);
         k.register(Service.class);
+        k.register(ServiceCategory.class);
         k.register(Termin.class);
         k.register(Blockierung.class);
         k.register(LoginRequest.class);
@@ -67,9 +70,12 @@ public class KalenderServer extends Server {
         k.register(TerminRequest.class);
         k.register(StornoRequest.class);
         k.register(BlockRequest.class);
-        k.register(VacationRequest.class);
+        k.register(EditVacationRequest.class);
         k.register(RemoveVacationRequest.class);
+        k.register(CreateVacationRequest.class);
         k.register(RemoveBlockRequest.class);
+        k.register(CreateServiceRequest.class);
+        k.register(RemoveServiceRequest.class);
     }
 
     private void registerListeners() {
@@ -77,5 +83,6 @@ public class KalenderServer extends Server {
         super.addListener(new LoginListener());
         super.addListener(new BlockListener());
         super.addListener(new VacationListener());
+        super.addListener(new ServiceListener());
     }
 }
