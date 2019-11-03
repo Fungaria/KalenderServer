@@ -25,6 +25,11 @@ public class TerminListener extends Listener {
             app.handler.root.appointments.put(termin.id, termin);
             app.handler.writeFile();
             app.server.sendToAllTCP(termin);
+        }else if(object instanceof Termin){
+            Termin termin = (Termin)object;
+            app.handler.root.appointments.put(termin.id, termin);
+            app.handler.writeFile();
+            app.server.sendToAllTCP(termin);
         }else if(object instanceof NetworkData.StornoRequest){
             deleteTermin(((NetworkData.StornoRequest) object).id);
             app.handler.writeFile();
@@ -35,7 +40,6 @@ public class TerminListener extends Listener {
     private void deleteTermin(int id){
         app.handler.root.appointments.remove(id);
     }
-    
     
     private Termin createTermin(NetworkData.TerminRequest request) {
         Termin termin = new Termin();
