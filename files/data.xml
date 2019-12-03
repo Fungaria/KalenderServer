@@ -25,7 +25,7 @@
         <item start="2019-10-28 09:00:00" duration="3" friseur="5" msg="" id="14"/>
     </blockierungen>
     <kunden>
-        <item name="Reiser" vorname="Peter" phone="45678" id="0"/>
+        <item name="Reiser" vorname="Peter" phone="45678" id="0"/>  
         <item name="Reiser" vorname="Samuel" phone="45678" id="1"/>
         <item name="Chur" vorname="Chill" phone="45678" id="2"/>
         <item name="Me" vorname="Boi" phone="45678" id="3"/>
