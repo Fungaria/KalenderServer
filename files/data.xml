@@ -1,46 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:dataRoot xmlns:ns2="de.fungistudii.kalender">
     <termine>
-        <item kundenid="0" start="2019-09-12 10:30:00" dauer="60" service="0" friseur="0" erstellt="2019-09-28 18:30:00" urheber="0" id="1"/>
-        <item kundenid="0" start="2019-10-13 10:15:00" dauer="240" service="0" friseur="4" erstellt="2019-10-13 15:48:49" urheber="0" id="3"/>
-        <item kundenid="0" start="2019-10-13 07:45:00" dauer="180" service="0" friseur="1" erstellt="2019-10-13 15:50:58" urheber="0" id="4"/>
-        <item kundenid="0" start="2019-10-13 09:45:00" dauer="120" service="0" friseur="2" erstellt="2019-10-13 15:52:42" urheber="0" id="7"/>
-        <item kundenid="0" start="2019-10-13 14:00:00" dauer="180" service="0" friseur="1" erstellt="2019-10-13 15:53:07" urheber="0" id="8"/>
-        <item kundenid="0" start="2019-10-16 12:15:00" dauer="180" service="0" friseur="3" erstellt="2019-10-16 19:32:16" urheber="0" id="9"/>
-        <item kundenid="0" start="2019-10-27 10:00:00" dauer="60" service="0" friseur="2" erstellt="2019-10-27 16:12:58" urheber="0" id="10"/>
-        <item kundenid="1" start="2019-12-11 10:00:00" dauer="60" service="0" friseur="2" erstellt="2019-12-03 08:46:46" urheber="0" id="11"/>
-        <item kundenid="1" start="2019-12-07 09:30:00" dauer="60" service="0" friseur="0" erstellt="2019-12-07 16:58:33" urheber="0" id="12"/>
-        <item kundenid="0" start="2019-12-07 15:45:00" dauer="60" service="0" friseur="4" erstellt="2019-12-07 17:23:48" urheber="0" id="13"/>
-        <item kundenid="1" start="2019-12-07 10:30:00" dauer="60" service="0" friseur="3" erstellt="2019-12-07 17:58:17" urheber="0" id="14"/>
-        <item kundenid="1" start="2019-12-10 11:00:00" dauer="60" service="0" friseur="2" erstellt="2019-12-11 19:34:22" urheber="0" id="15"/>
-        <item kundenid="1" start="2019-12-10 08:30:00" dauer="60" service="0" friseur="2" erstellt="2019-12-11 19:34:30" urheber="0" id="16"/>
-        <item kundenid="0" start="2019-12-01 05:30:00" dauer="60" service="0" friseur="1" erstellt="2019-12-22 23:39:17" urheber="0" id="17"/>
+        <item kundenid="1" start="2020-03-19 11:00:00" duration="30" service="0" friseur="1" erstellt="2020-03-19 14:44:48" urheber="0" paidPrice="0" id="1"/>
+        <item kundenid="1" start="2020-03-19 09:00:00" duration="90" service="0" friseur="4" erstellt="2020-03-19 16:47:48" urheber="0" paidPrice="0" id="2"/>
+        <item kundenid="1" start="2020-03-21 08:45:00" duration="165" service="0" friseur="2" erstellt="2020-03-21 15:35:47" urheber="0" paidPrice="0" id="3"/>
     </termine>
     <blockierungen>
-        <item start="2019-10-12 08:45:00" duration="13" friseur="4" msg="" id="1"/>
-        <item start="2019-10-10 08:00:00" duration="20" friseur="3" msg="" id="2"/>
-        <item start="2019-10-10 08:00:00" duration="46" friseur="4" msg="" id="3"/>
-        <item start="2019-10-13 10:00:00" duration="23" friseur="3" msg="" id="4"/>
-        <item start="2019-10-13 15:00:00" duration="16" friseur="4" msg="" id="7"/>
-        <item start="2019-10-13 20:00:00" duration="14" friseur="2" msg="" id="8"/>
-        <item start="2019-10-13 08:00:00" duration="56" friseur="0" msg="" id="9"/>
-        <item start="2019-10-13 09:15:00" duration="15" friseur="5" msg="Mittag" id="10"/>
-        <item start="2019-11-02 08:15:00" duration="17" friseur="2" msg="Boi" id="11"/>
-        <item start="2019-10-28 10:00:00" duration="8" friseur="2" msg="" id="12"/>
-        <item start="2019-10-28 10:15:00" duration="6" friseur="4" msg="" id="13"/>
-        <item start="2019-10-28 09:00:00" duration="3" friseur="5" msg="" id="14"/>
+        <item start="2019-12-28 11:00:00" duration="4" friseur="2" msg="" id="1"/>
+        <item start="2019-12-29 09:30:00" duration="9" friseur="5" msg="Pause" id="2"/>
+        <item start="2019-12-29 08:15:00" duration="4" friseur="3" msg="zuio" id="3"/>
+        <item start="2019-12-30 10:15:00" duration="4" friseur="1" msg="hghg" id="4"/>
     </blockierungen>
     <kunden>
-        <item name="Reiser" vorname="Peter" phone="45678" id="0"/>
-        <item name="Reiser" vorname="Samuel" phone="45678" id="1"/>
-        <item name="Chur" vorname="Chill" phone="45678" id="2"/>
-        <item name="Me" vorname="Boi" phone="45678" id="3"/>
+        <item name="Reiser" vorname="Peter" phone="45678" mail="" notes="" id="0"/>
+        <item name="Reiser" vorname="Samuel" phone="45678" mail="" notes="" id="1"/>
+        <item name="Chur" vorname="Chill" phone="45678" mail="" notes="" id="2"/>
+        <item name="Washington" vorname="George" phone="45678" mail="" notes="" id="3"/>
+        <item name="John" vorname="Adams" phone="45678" mail="" notes="" id="4"/>
+        <item name="Thomas" vorname="Jefferson" phone="45678" mail="" notes="" id="5"/>
+        <item name="James" vorname="Madison" phone="45678" mail="" notes="" id="6"/>
+        <item name="James" vorname="Monroe" phone="45678" mail="" notes="" id="7"/>
+        <item name="Quincy Adams" vorname="John " phone="45678" mail="" notes="" id="8"/>
+        <item name="Jackson" vorname="Andrew" phone="45678" mail="" notes="" id="9"/>
+        <item name="van Buren" vorname="Martin" phone="45678" mail="" notes="" id="10"/>
+        <item name="Harrison" vorname="William Henry" phone="45678" mail="" notes="" id="11"/>
+        <item name="Taylor" vorname="John" phone="45678" mail="" notes="" id="12"/>
+        <item name="Fillmore" vorname="Millard" phone="45678" mail="" notes="" id="13"/>
+        <item name="Pierce" vorname="Franklin " phone="45678" mail="" notes="" id="14"/>
+        <item name="Buchanan" vorname="James" phone="45678" mail="" notes="" id="15"/>
+        <item name="Lincoln" vorname="Abraham" phone="45678" mail="" notes="" id="16"/>
+        <item name="Johnson" vorname="Andrew" phone="45678" mail="" notes="" id="17"/>
+        <item name="Grant" vorname="Ulysses S." phone="45678" mail="" notes="" id="18"/>
+        <item name="Hayes" vorname="Rutherford B." phone="45678" mail="" notes="" id="19"/>
+        <item name="Garfield" vorname="James Abram" phone="45678" mail="" notes="" id="20"/>
+        <item name="Arthur" vorname="Chester Alan" phone="45678" mail="" notes="" id="21"/>
+        <item name="Cleveland" vorname="Grover" phone="45678" mail="" notes="" id="22"/>
+        <item name="Harrison" vorname="Benjamin" phone="45678" mail="" notes="" id="23"/>
+        <item name="McKinley" vorname="William" phone="45678" mail="" notes="" id="24"/>
+        <item name="Roosevelt" vorname="Theodore" phone="45678" mail="" notes="" id="25"/>
+        <item name="Taft" vorname="William Howard" phone="45678" mail="" notes="" id="26"/>
+        <item name="Wilson" vorname="Woodrow" phone="45678" mail="" notes="" id="27"/>
+        <item name="Harding" vorname="Warren Gamaliel" phone="45678" mail="" notes="" id="28"/>
+
     </kunden>
     <friseure>
         <item name="Meryem" id="0">
             <vacations>
-                <item start="2019-12-17 17:55:00" end="2019-12-21 20:16:00" id="1"/>
-                <item start="2019-12-03 17:46:00" end="2019-12-07 17:46:00" id="2"/>
+                <item start="2019-12-17" end="2019-12-21" id="1"/>
+                <item start="2019-12-03" end="2019-12-07" id="2"/>
             </vacations>
         </item>
         <item name="Nena" id="1">
@@ -51,19 +58,22 @@
         </item>
         <item name="Linh" id="3">
             <vacations>
-                <item start="2019-10-27 23:16:01" end="2019-10-27 23:16:01" id="1"/>
+                <item start="2019-10-27" end="2019-10-27" id="1"/>
             </vacations>
         </item>
         <item name="Nida" id="4">
             <vacations>
-                <item start="2019-10-15 23:19:00" end="2019-10-19 23:19:00" id="1"/>
-                <item start="2019-10-22 01:46:00" end="2019-10-25 01:46:00" id="2"/>
+                <item start="2019-10-15" end="2019-10-19" id="1"/>
+                <item start="2019-10-22" end="2019-10-25" id="2"/>
             </vacations>
         </item>
-        <item name="Linh" id="5">
+        <item name="Fret" id="5">
             <vacations/>
         </item>
         <item name="Nardos" id="6">
+            <vacations/>
+        </item>
+        <item name="Maxi" id="7">
             <vacations/>
         </item>
     </friseure>

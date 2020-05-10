@@ -6,13 +6,15 @@
 package calendarServer.server;
 
 import calendarServer.database.Termin;
-import calendarServer.database.Kunde;
+import calendarServer.database.Customer;
 import calendarServer.database.Blockierung;
 import calendarServer.database.Service;
 import calendarServer.database.Vacation;
 import calendarServer.database.DataRoot;
 import calendarServer.database.Friseur;
 import calendarServer.database.ServiceCategory;
+import calendarServer.database.serializers.DateSerializer;
+import calendarServer.database.serializers.DateTimeSerializer;
 import calendarServer.server.listeners.LoginListener;
 import calendarServer.server.listeners.TerminListener;
 import com.esotericsoftware.kryo.Kryo;
@@ -22,8 +24,10 @@ import calendarServer.server.listeners.BlockListener;
 import calendarServer.server.listeners.ServiceListener;
 import calendarServer.server.listeners.VacationListener;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -57,8 +61,10 @@ public class KalenderServer extends Server {
         k.register(HashMap.class);
         k.register(HashMap.Entry.class);
         k.register(DataRoot.class);
-        k.register(Date.class);
-        k.register(Kunde.class);
+        k.register(LocalDate.class, new DateSerializer());
+        k.register(LocalTime.class);
+        k.register(LocalDateTime.class, new DateTimeSerializer());
+        k.register(Customer.class);
         k.register(Friseur.class);
         k.register(Vacation.class);
         k.register(Service.class);

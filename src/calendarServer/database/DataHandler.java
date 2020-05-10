@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
@@ -28,16 +27,15 @@ public class DataHandler {
             context = JAXBContext.newInstance(DataRoot.class);
             Unmarshaller um = context.createUnmarshaller();
             root = (DataRoot) um.unmarshal(new FileReader(XML_LOCATION));
+            
         } catch (JAXBException ex) {
             Logger.getLogger(DataHandler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DataHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
 
     public void writeFile() {
-        
         try {
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
@@ -48,7 +46,6 @@ public class DataHandler {
     }
 
     public void setData(DataRoot dataRoot) {
-        System.out.println(dataRoot);
         this.root = dataRoot;
         writeFile();
     }

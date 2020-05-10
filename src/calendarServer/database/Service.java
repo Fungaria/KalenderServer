@@ -6,13 +6,10 @@
 package calendarServer.database;
 
 import calendarServer.database.adapters.MapElement;
-import calendarServer.database.adapters.VacationAdapter;
-import java.util.HashMap;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-/**
+/** 
  *
  * @author sreis
  */
@@ -33,8 +30,15 @@ public class Service extends MapElement{
     @XmlAttribute
     public int price;
 
-    @Override
-    public String toString() {
-        return name;
+    public Service() {
+    }
+
+    public Service(int id, String name, int category, int duration, int einwirkZeit, int price) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.duration = duration;
+        this.einwirkZeit = einwirkZeit;
+        this.price = price;
     }
 }

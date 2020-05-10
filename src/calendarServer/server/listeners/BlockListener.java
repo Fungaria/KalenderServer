@@ -6,6 +6,7 @@ import calendarServer.database.DataHandler;
 import calendarServer.server.NetworkData;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
+import jdk.nashorn.internal.ir.Block;
 
 /**
  *
@@ -18,6 +19,11 @@ public class BlockListener extends Listener{
         if(object instanceof NetworkData.BlockRequest){
             NetworkData.BlockRequest request = (NetworkData.BlockRequest)object;
             addBlock(request);
+        }else if (object instanceof Blockierung){
+            Blockierung block = (Blockierung)object;
+            app.handler.root.blockierungen.put(block.id, block);
+            app.handler.writeFile();
+            app.server.sendToAllTCP(block);
         }else if(object instanceof NetworkData.RemoveBlockRequest){
             removeBlock(((NetworkData.RemoveBlockRequest) object).id);
             app.server.sendToAllTCP(object);

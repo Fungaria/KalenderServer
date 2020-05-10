@@ -6,6 +6,7 @@ import calendarServer.database.Termin;
 import calendarServer.server.NetworkData;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Optional;
 import java.util.logging.Level;
@@ -43,14 +44,14 @@ public class TerminListener extends Listener {
     
     private Termin createTermin(NetworkData.TerminRequest request) {
         Termin termin = new Termin();
-        termin.dauer = request.duration;
+        termin.duration = request.duration;
         termin.friseur = request.friseurId;
         termin.id = DataHandler.nextId(app.handler.root.appointments);
         termin.kundenid = request.kundenId;
         termin.service = request.serviceId;
         termin.start = request.start;
         termin.urheber = request.urheber;
-        termin.erstellt = new Date();
+        termin.erstellt = LocalDateTime.now();
         return termin;
     }
 }

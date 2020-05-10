@@ -5,9 +5,9 @@
  */
 package calendarServer.database;
 
-import calendarServer.database.adapters.DateAdapter;
+import calendarServer.database.adapters.DateTimeAdapter;
 import calendarServer.database.adapters.MapElement;
-import java.util.Date;
+import java.time.LocalDateTime;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -19,8 +19,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "blockierung")
 public class Blockierung extends MapElement{
     @XmlAttribute
-    @XmlJavaTypeAdapter(DateAdapter.class)
-    public Date start;
+    @XmlJavaTypeAdapter(DateTimeAdapter.class)
+    public LocalDateTime start;
     @XmlAttribute
     public int duration;
     @XmlAttribute
@@ -28,8 +28,13 @@ public class Blockierung extends MapElement{
     @XmlAttribute
     public String msg;
 
-    @Override
-    public String toString() {
-        return "Blockierung{" + "start=" + start + ", duration=" + duration + ", friseur=" + friseur + ", msg=" + msg + '}';
+    public Blockierung() {
+    }
+
+    public Blockierung(LocalDateTime start, int duration, int friseur, String msg) {
+        this.start = start;
+        this.duration = duration;
+        this.friseur = friseur;
+        this.msg = msg;
     }
 }

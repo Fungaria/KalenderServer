@@ -19,9 +19,9 @@ public class LoginListener extends Listener{
         if(object instanceof LoginRequest){
             response.msg = "oh me boii";
             response.sucess = true;
+            connection.sendTCP(app.handler.root);
             connection.sendTCP(response);
             
-            connection.sendTCP(app.handler.root);
         }
     }
 }

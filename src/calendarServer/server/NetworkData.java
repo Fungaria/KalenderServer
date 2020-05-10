@@ -5,7 +5,8 @@
  */
 package calendarServer.server;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -29,7 +30,7 @@ public class NetworkData {
     public static class TerminRequest {
 
         public int kundenId;
-        public Date start;
+        public LocalDateTime start;
         public int duration;
         public int serviceId;
         public int friseurId;
@@ -48,7 +49,7 @@ public class NetworkData {
 
     public static class BlockRequest {
 
-        public Date start;
+        public LocalDateTime start;
         public int duration;
         public int friseur;
         public String msg;
@@ -56,8 +57,8 @@ public class NetworkData {
 
     public static class EditVacationRequest {
         public int workerId;
-        public Date start;
-        public Date end;
+        public LocalDate start;
+        public LocalDate end;
         public int id;
     }
 

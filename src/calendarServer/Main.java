@@ -28,4 +28,8 @@ public class Main {
             app.update(delta_time);
         }
     }
+    
+    public void intitit(){
+        int[] elements = new int[5];
+    } 
 }

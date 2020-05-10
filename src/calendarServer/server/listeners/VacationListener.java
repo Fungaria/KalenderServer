@@ -8,6 +8,7 @@ import calendarServer.server.NetworkData;
 import calendarServer.server.NetworkData.CreateVacationRequest;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -38,7 +39,7 @@ public class VacationListener extends Listener{
             app.server.sendToAllTCP(app.handler.root.friseure.get(request.workerId));
         }else if(object instanceof NetworkData.CreateVacationRequest){
             Friseur friseur = app.handler.root.friseure.get(((CreateVacationRequest) object).workerId);
-            Vacation vacation = new Vacation(DataHandler.nextId(friseur.vacations), new Date(), new Date());
+            Vacation vacation = new Vacation(DataHandler.nextId(friseur.vacations), LocalDate.now(), LocalDate.now());
             friseur.vacations.put(vacation.id, vacation);
             app.handler.writeFile();
             connection.sendTCP(friseur);

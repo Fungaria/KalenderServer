@@ -1,33 +1,29 @@
 package calendarServer.database.adapters;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * i like to go on dates, very romantic and stuff
  * @author sreis
  */
-public class DateAdapter extends XmlAdapter<String, Date> {
+public class DateAdapter extends XmlAdapter<String, LocalDate> {
 
-    private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Override
-    public String marshal(Date v) throws Exception {
+    public String marshal(LocalDate v) throws Exception {
         synchronized (dateFormat) {
             return dateFormat.format(v);
         }
     }
 
     @Override
-    public Date unmarshal(String v) throws Exception {
+    public LocalDate unmarshal(String v) throws Exception {
         synchronized (dateFormat) {
-            return dateFormat.parse(v);
+            return LocalDate.parse(v, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         }
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }

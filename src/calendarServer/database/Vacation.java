@@ -7,7 +7,7 @@ package calendarServer.database;
 
 import calendarServer.database.adapters.DateAdapter;
 import calendarServer.database.adapters.MapElement;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -20,15 +20,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class Vacation extends MapElement{
     @XmlAttribute
     @XmlJavaTypeAdapter(DateAdapter.class)
-    public Date start;
+    public LocalDate start;
     @XmlAttribute
     @XmlJavaTypeAdapter(DateAdapter.class)
-    public Date end;
+    public LocalDate end;
 
     public Vacation() {
     }
 
-    public Vacation(int id, Date start, Date end) {
+    public Vacation(int id, LocalDate start, LocalDate end) {
         this.id = id;
         this.start = start;
         this.end = end;

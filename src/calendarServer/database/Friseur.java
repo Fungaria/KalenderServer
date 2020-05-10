@@ -7,6 +7,7 @@ package calendarServer.database;
 
 import calendarServer.database.adapters.MapElement;
 import calendarServer.database.adapters.VacationAdapter;
+import java.time.LocalDate;
 import java.util.HashMap;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -28,5 +29,9 @@ public class Friseur extends MapElement{
     @Override
     public String toString() {
         return name;
+    }
+    
+    public boolean hasVacation(LocalDate date){
+        return vacations.values().stream().anyMatch((v) -> !(date.isBefore(v.start) || date.isAfter(v.end)));
     }
 }

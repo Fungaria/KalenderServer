@@ -5,8 +5,10 @@
  */
 package calendarServer.database;
 import calendarServer.database.adapters.DateAdapter;
+import calendarServer.database.adapters.DateTimeAdapter;
 import calendarServer.database.adapters.MapElement;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -16,22 +18,28 @@ public class Termin extends MapElement{
     @XmlAttribute
     public int kundenid;
     @XmlAttribute
-    @XmlJavaTypeAdapter(DateAdapter.class)
-    public Date start;
+    @XmlJavaTypeAdapter(DateTimeAdapter.class)
+    public LocalDateTime start;
     @XmlAttribute
-    public int dauer;
+    public int duration;
     @XmlAttribute
     public int service;
     @XmlAttribute
     public int friseur;
     @XmlAttribute
-    @XmlJavaTypeAdapter(DateAdapter.class)
-    public Date erstellt;
+    @XmlJavaTypeAdapter(DateTimeAdapter.class)
+    public LocalDateTime erstellt;
     @XmlAttribute
     public int urheber;
+    @XmlAttribute
+    public String notes;
+    @XmlAttribute
+    public String color;
+    @XmlAttribute
+    public int paidPrice;
 
     @Override
     public String toString() {
-        return "Termin{" + "id=" + id + ", kundenid=" + kundenid + ", start=" + start + ", dauer=" + dauer + ", service=" + service + ", friseur=" + friseur + '}';
+        return "Termin{" + "id=" + id + ", kundenid=" + kundenid + ", start=" + start + ", dauer=" + duration + ", service=" + service + ", friseur=" + friseur + '}';
     }
 }
