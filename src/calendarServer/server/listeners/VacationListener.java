@@ -2,7 +2,7 @@ package calendarServer.server.listeners;
 
 import static calendarServer.Main.app;
 import calendarServer.database.DataHandler;
-import calendarServer.database.Friseur;
+import calendarServer.database.Employee;
 import calendarServer.database.Vacation;
 import calendarServer.server.NetworkData;
 import calendarServer.server.NetworkData.CreateVacationRequest;
@@ -22,7 +22,7 @@ public class VacationListener extends Listener{
         if(object instanceof NetworkData.EditVacationRequest){
             NetworkData.EditVacationRequest request = (NetworkData.EditVacationRequest)object;
             
-            Friseur friseur = app.handler.root.friseure.get(request.workerId);
+            Employee friseur = app.handler.root.friseure.get(request.workerId);
             
             Vacation vacation = new Vacation();
             vacation.start = request.start;
@@ -38,7 +38,7 @@ public class VacationListener extends Listener{
             app.handler.writeFile();
             app.server.sendToAllTCP(app.handler.root.friseure.get(request.workerId));
         }else if(object instanceof NetworkData.CreateVacationRequest){
-            Friseur friseur = app.handler.root.friseure.get(((CreateVacationRequest) object).workerId);
+            Employee friseur = app.handler.root.friseure.get(((CreateVacationRequest) object).workerId);
             Vacation vacation = new Vacation(DataHandler.nextId(friseur.vacations), LocalDate.now(), LocalDate.now());
             friseur.vacations.put(vacation.id, vacation);
             app.handler.writeFile();

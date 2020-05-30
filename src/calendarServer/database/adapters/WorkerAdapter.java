@@ -5,14 +5,14 @@
  */
 package calendarServer.database.adapters;
 
-import calendarServer.database.Friseur;
+import calendarServer.database.Employee;
 
 /**
  *
  * @author sreis
  */
-public class WorkerAdapter extends MapAdapter<Friseur>{
+public class WorkerAdapter extends MapAdapter<Employee>{
     public WorkerAdapter() {
-        super(Friseur[]::new);
+        super(Employee[]::new);
     }
 }

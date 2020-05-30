@@ -11,7 +11,7 @@ import calendarServer.database.Blockierung;
 import calendarServer.database.Service;
 import calendarServer.database.Vacation;
 import calendarServer.database.DataRoot;
-import calendarServer.database.Friseur;
+import calendarServer.database.Employee;
 import calendarServer.database.ServiceCategory;
 import calendarServer.database.serializers.DateSerializer;
 import calendarServer.database.serializers.DateTimeSerializer;
@@ -65,7 +65,7 @@ public class KalenderServer extends Server {
         k.register(LocalTime.class);
         k.register(LocalDateTime.class, new DateTimeSerializer());
         k.register(Customer.class);
-        k.register(Friseur.class);
+        k.register(Employee.class);
         k.register(Vacation.class);
         k.register(Service.class);
         k.register(ServiceCategory.class);
